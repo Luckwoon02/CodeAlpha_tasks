@@ -1,14 +1,25 @@
-# Event Registration System - Full Stack Application
+# 📦 CodeAlpha Internship Tasks
+
+This repository contains multiple full-stack projects built during the **CodeAlpha Full Stack Development Internship**.  
+Each project demonstrates modern web development practices including REST API design, database modeling, and frontend-backend integration.
+
+---
+
+## 📌 Projects Included
+
+### 1️⃣ **Event Registration System - Full Stack Application**
+
+📍 Folder: `CodeAlpha_Event_Registration_System` (Backend) + `event-registration-frontend` (Frontend)
 
 A complete full-stack web application for event registration built with React.js frontend and Node.js/Express backend.
 
-## 🚀 Project Overview
+**🚀 Project Overview**
 
 This project consists of two main parts:
 - **Backend**: Node.js + Express.js + MongoDB (REST API)
 - **Frontend**: React.js + Vite + Axios (User Interface)
 
-## 📁 Project Structure
+**📁 Project Structure**
 
 ```
 ├── CodeAlpha_Event_Registration_System/    # Backend (Node.js + Express)
@@ -46,35 +57,68 @@ This project consists of two main parts:
 └── README.md                               # This file
 ```
 
-## 🛠️ Tech Stack
+**🛠️ Tech Stack**
 
-### Backend
+Backend:
 - **Node.js** - Runtime environment
 - **Express.js** - Web framework
 - **MongoDB** - Database
 - **Mongoose** - MongoDB ODM
 - **CORS** - Cross-origin resource sharing
 
-### Frontend
+Frontend:
 - **React.js** - UI library
 - **Vite** - Build tool and dev server
 - **React Router** - Client-side routing
 - **Axios** - HTTP client
 - **JavaScript** - Programming language (no TypeScript)
 
+**🎯 Features**
+
+User Features:
+- ✅ View all available events
+- ✅ View detailed event information
+- ✅ Register as a new user
+- ✅ Register for events
+- ✅ View personal registrations
+- ✅ Cancel event registrations
+
+Technical Features:
+- ✅ RESTful API design
+- ✅ CORS enabled for cross-origin requests
+- ✅ Error handling and validation
+- ✅ Responsive design
+- ✅ Real-time data updates
+- ✅ Clean, beginner-friendly code structure
+
+---
+
+### 2️⃣ **Job Board Platform**
+
+📍 Folder: `job-board-platform`
+
+A backend project for managing job postings and applications.
+
+**Features**
+- Create & manage job posts
+- Apply for jobs
+- View job listings
+
+**Tech**
+- Node.js
+- Express.js
+- MongoDB
+
+---
+
 ## 🚀 Getting Started
 
-### Prerequisites
-- Node.js (v14 or higher)
-- MongoDB (running locally or MongoDB Atlas)
-- Git
-
-### Installation & Setup
+### Event Registration System
 
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/Luckwoon02/CodeAlpha_tasks.git
-   cd CodeAlpha_tasks/CodeAlpha_Event_Registration_System
+   cd CodeAlpha_tasks
    ```
 
 2. **Setup Backend:**
@@ -86,8 +130,6 @@ This project consists of two main parts:
    npm install
    
    # Start the backend server
-   npm start
-   # or
    node server.js
    ```
    Backend will run on `http://localhost:3000`
@@ -111,18 +153,43 @@ This project consists of two main parts:
    node add-sample-data.js
    ```
 
+### General Setup for Other Projects
+
+1. **Clone Repo**
+   ```bash
+   git clone https://github.com/Luckwoon02/CodeAlpha_tasks.git
+   ```
+
+2. **Navigate to Project**
+   ```bash
+   cd [project-folder-name]
+   ```
+
+3. **Install Dependencies**
+   ```bash
+   npm install
+   ```
+
+4. **Start Server**
+   ```bash
+   npm start
+   # or
+   node server.js
+   ```
+
+---
+
 ## 🔧 Configuration
 
-### Backend Configuration
+### Event Registration System Configuration
 - **MongoDB URI**: Update in `CodeAlpha_Event_Registration_System/server.js`
-- **Port**: Default is 3000, can be changed in server.js
+- **Backend Port**: Default is 3000
+- **Frontend Port**: Default is 5173 (Vite)
 - **CORS**: Configured to allow requests from `http://localhost:5173`
 
-### Frontend Configuration
-- **API Base URL**: Update in `event-registration-frontend/src/api/api.js`
-- **Port**: Default is 5173 (Vite default)
+---
 
-## 📚 API Endpoints
+## 📚 API Endpoints (Event Registration System)
 
 ### Users
 - `POST /users` - Create a new user
@@ -138,28 +205,12 @@ This project consists of two main parts:
 - `GET /registrations/:userId` - Get user's registrations
 - `DELETE /registrations/:id` - Cancel a registration
 
-## 🎯 Features
+---
 
-### User Features
-- ✅ View all available events
-- ✅ View detailed event information
-- ✅ Register as a new user
-- ✅ Register for events
-- ✅ View personal registrations
-- ✅ Cancel event registrations
-
-### Technical Features
-- ✅ RESTful API design
-- ✅ CORS enabled for cross-origin requests
-- ✅ Error handling and validation
-- ✅ Responsive design
-- ✅ Real-time data updates
-- ✅ Clean, beginner-friendly code structure
-
-## 🔄 User Flow
+## 🔄 User Flow (Event Registration System)
 
 1. **First-time User:**
-   - Visit the application
+   - Visit the application at `http://localhost:5173`
    - Go to "Register User" page
    - Fill in name and email
    - Save the returned User ID
@@ -177,6 +228,8 @@ This project consists of two main parts:
    - Go to "My Registrations"
    - Enter your User ID to view all registrations
    - Cancel registrations if needed
+
+---
 
 ## 🐛 Troubleshooting
 
@@ -197,6 +250,8 @@ This project consists of two main parts:
    - Verify API endpoints in browser/Postman
    - Check network tab in browser dev tools
 
+---
+
 ## 🚀 Deployment
 
 ### Backend Deployment
@@ -209,6 +264,22 @@ This project consists of two main parts:
 - Deploy to Netlify, Vercel, or similar platform
 - Update API base URL to point to deployed backend
 
+---
+
+## 🛠️ Common Tech Stack
+
+| Layer | Tools |
+|-------|-------|
+| Runtime | Node.js |
+| Framework | Express.js |
+| Database | MongoDB (Mongoose) |
+| Frontend | React.js + Vite |
+| API Design | RESTful |
+| HTTP Client | Axios |
+| Testing | Postman / Thunder Client |
+
+---
+
 ## 🤝 Contributing
 
 1. Fork the repository
@@ -217,17 +288,23 @@ This project consists of two main parts:
 4. Test thoroughly
 5. Submit a pull request
 
+---
+
 ## 📝 License
 
 This project is part of the CodeAlpha internship program.
+
+---
 
 ## 👨‍💻 Author
 
 Created as part of CodeAlpha Full Stack Development internship.
 
+---
+
 ## 🎓 Learning Outcomes
 
-This project demonstrates:
+This repository demonstrates:
 - Full-stack web development
 - RESTful API design and implementation
 - React.js frontend development
@@ -235,6 +312,7 @@ This project demonstrates:
 - CORS configuration and debugging
 - Error handling and user experience
 - Git version control and deployment
+- Modern JavaScript development practices
 
 ---
 
