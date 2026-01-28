@@ -4,6 +4,7 @@
 // Import required packages
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors'); // Import CORS middleware
 
 // Import our route files
 const userRoutes = require('./routes/userRoutes');
@@ -12,6 +13,18 @@ const registrationRoutes = require('./routes/registrationRoutes');
 
 // Create an Express application
 const app = express();
+
+// CORS Configuration - VERY IMPORTANT!
+// This allows React frontend (port 5173) to talk to Express backend (port 3000)
+const corsOptions = {
+  origin: 'http://localhost:5173', // Allow requests from React dev server
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow these HTTP methods
+  allowedHeaders: ['Content-Type', 'Authorization'], // Allow these headers
+  credentials: true // Allow cookies if needed
+};
+
+// Apply CORS middleware BEFORE other middleware
+app.use(cors(corsOptions));
 
 // Middleware to parse JSON data from requests
 // This allows us to read req.body in our routes
